@@ -32,3 +32,15 @@ function init_theme() {
 EOL
 sed -i -e '/boardname=/r /tmp/appendtext.txt' friendlywrt/target/linux/rockchip/armv8/base-files/root/setup.sh
 # }}
+
+
+
+# {{ Add luci-app-diskman
+(cd friendlywrt && {
+    mkdir -p package/OpenAppFilter
+    git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+})
+cat >> configs/rockchip/01-nanopi <<EOL
+CONFIG_PACKAGE_luci-app-oaf=y
+EOL
+# }}
