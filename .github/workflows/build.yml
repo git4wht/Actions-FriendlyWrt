@@ -8,30 +8,30 @@ on:
         description: 'Versions'
         required: false
         options:
-          - "[21.02]"
-          - "[22.03]"
-          - "[21.02, 22.03]"
-        default: "[22.03]"
+          - "['21.02']"
+          - "['22.03']"
+          - "['21.02', '22.03']"
+        default: "['22.03']"
       SET:
         type: choice
         description: 'Versions'
         required: false
         options:
-          - "[docker]"
-          - "[non-docker]"
-          - "[docker, non-docker]"
-        default: "[non-docker]"
+          - "['docker']"
+          - "['non-docker']"
+          - "['docker', 'non-docker']"
+        default: "['non-docker']"
       CPU:
         type: choice
         description: 'Versions'
         required: false
         options:
-          - "[rk3328]"
-          - "[rk3399]"
-          - "[rk3568]"
-          - "[rk3588]"
-          - "[rk3328, rk3399, rk3568, rk3588]"
-        default: "[rk3328]"
+          - "['rk3328']"
+          - "['rk3399']"
+          - "['rk3568']"
+          - "['rk3588']"
+          - "['rk3328', 'rk3399', 'rk3568', 'rk3588']"
+        default: "['rk3328']"
 
 jobs:
   prepare_release:
