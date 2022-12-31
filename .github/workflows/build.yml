@@ -1,6 +1,6 @@
 on:
-  watch:
-    types: started
+  # watch:
+  #   types: started
   workflow_dispatch:
     inputs:
       VERSION:
