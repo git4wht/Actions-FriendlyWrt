@@ -44,3 +44,20 @@ cat >> configs/rockchip/01-nanopi <<EOL
 CONFIG_PACKAGE_luci-app-oaf=y
 EOL
 # }}
+
+# {{ Add wolplus
+(cd friendlywrt)
+cat >> configs/rockchip/01-nanopi <<EOL
+CONFIG_PACKAGE_luci-app-services-wolplus=y
+EOL
+# }}
+
+# {{ Add enclash
+(cd friendlywrt && {
+    mkdir -p package/luci-app-openclash
+    svn export https://github.com/vernesong/OpenClash/branches/dev/luci-app-openclash package/luci-app-openclash
+})
+cat >> configs/rockchip/01-nanopi <<EOL
+CONFIG_PACKAGE_luci-app-openclash=y
+EOL
+# }}
